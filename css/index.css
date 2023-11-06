@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: -apple-system;
+}
+
+#encabezado {
+    background-color: #000;
+    padding: 10px;
+}
+
+#logo-eslogan {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 250px;
+    height: 250px;
+}
+
+#eslogan {
+    color: #fff;
+    font-size: 50px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+.navbar a {
+    color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-toggler {
+    border: 1px solid #fff;
+}
+
+/* Estilos de la sección "Hot Toys" */
+#hottoys {
+    margin: 20px;
+}
+
+#hottoys h1 {
+    text-align: center;
+}
+
+#hottoys hr {
+    border: 3px solid black;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.productos-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#darthvader, #obiwan, #anakin {
+    width: 25%;
+    transition: transform 0.3s;
+}
+
+#darthvader:hover {
+    transform: scale(1.1);
+}
+
+#anakin:hover {
+    transform: scale(1.1);
+}
+
+#obiwan:hover {
+    transform: scale(1.1);
+}
+
+#imagen img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#nombre p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+#precio h4 {
+    font-size: 20px;
+    color: #ffbf00;
+    margin-top: 15px;
+}

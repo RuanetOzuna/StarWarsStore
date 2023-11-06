@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Star Wars Store">
+        <link rel="icon" href="/img/LogoPagina.png">
+        <meta name="keywords" content="galaxia, sith, jedi, venta">
+        <link rel="stylesheet" href="/css/index.css">
+        <title>
+            Star Wars Store
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header id="encabezado">
+            <div id="logo-eslogan">
+                <div id="logo">
+                    <img src="/img/logo.jpeg" alt="Logo de Star Wars Store">
+                </div>
+                <p id="eslogan">Tu tienda de coleccionables de Star Wars</p>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="#">Star Wars Store</a>
+                    <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Hot Toys</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sideshow Collectibles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Funko Pop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white disabled" aria-disabled="true">Black Series</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>        
+        </header>
+        <div id="hottoys">
+            <div class="container-fluid space-lg">
+                <div class="row">
+                    <center>
+                        <div class="col-12">
+                            <div style="background-color: #f7cd46; height: 3px; width: 30%;">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 visible-xs">
+                            <div style="width: 100%;">
+                                <center>
+                                    <a title="Compra figuras de colección Hot Toys Mandalorian Star Wars Batman Iron Man WandaVision" href="https://tooys.mx/marca/hot-toys?disponibilidad=en-stock,pre-venta&amp;product_list_dir=desc" target="_blank" rel="noopener">
+                                        <img style="vertical-align: middle; text-align: center; border-style: none;" src="https://tooys.mx/media/wysiwyg/codazon/marcas/hot-toys_marca_mexico_figura_tooys.png" alt="Compra figuras coleccionables Hot Toys en México" width="30%">
+                                    </a>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div style="background-color: #ff2032; height: 3px; width: 30%;">
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            
+            <br>
+
+            <br>
+        
+            <div class="productos-container">
+                <div id="obiwan">
+                    <div id="imagen">
+                        <img src="/img/obiwan.jpeg" width="200" height="200">
+                    </div>
+                    <div id="nombre">
+                        <p>
+                            Obi-Wan Kenobi - Star Wars Obi-Wan Kenobi DX Series Escala 1:6 por Hot Toys
+                        </p>
+                    </div>
+                    <h3>Precio</h3>
+                    <div id="precio">
+                        <h4>$ 7,249.00</h4>
+                    </div>
+                </div>
+        
+                <div id="darthvader">
+                    <div id="imagen">
+                        <img src="/img/darthvader.jpeg" id="imagen" width="200" height="200">
+                    </div>
+                    <div id="nombre">
+                        <p>
+                            Darth Vader Deluxe Version - Star Wars Obi-Wan Kenobi Escala 1:6 por Hot Toys
+                        </p>
+                    </div>
+                    <h3>Precio</h3>
+                    <div id="precio">
+                        <h4>$ 10,665.00</h4>
+                    </div>
+                </div>
+
+                <div id="anakin">
+                    <div id="imagen">
+                        <img src="/img/anakin.jpeg" id="imagen" width="200" height="200">
+                    </div>
+                    <div id="nombre">
+                        <p>
+                            Anakin Skywalker - The Clone Wars Escala 1:6 por Hot Toys
+                        </p>
+                    </div>
+                    <h3>Precio</h3>
+                    <div id="precio">
+                        <h4>$ 7,849.00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agrega el script -->
+        <script type="module" src="/js/mostrar.js"></script>
+    </body>
+</html>

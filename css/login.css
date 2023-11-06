@@ -1,0 +1,52 @@
+/* Estilos generales */
+body {
+    background-color: black;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+/* Estilos para la tarjeta */
+.card {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* Estilos para el formulario */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Estilos para el botón de ingreso */
+#btnEnviar {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+}
+
+#btnEnviar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el mensaje de error */
+.error {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
