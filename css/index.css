@@ -147,8 +147,18 @@ h3 {
         flex-direction: column;
         align-items: center;
     }
+
+    .referencias-container {
+        flex-direction: column;
+        align-items: center;
+    }
     
     #darthvader, #obiwan, #anakin {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #cody, #doku, #incinerator {
         width: 100%;
         margin-bottom: 20px;
     }
