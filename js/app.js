@@ -19,20 +19,19 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Referencias a los elementos del DOM
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("contra");
-const loginButton = document.getElementById("btnEnviar");
-const errorMessage = document.getElementById("error");
+const emailInput = document.getElementById("txtCorreo");
+const passwordInput = document.getElementById("txtContraseña");
+const loginButton = document.getElementById("btnIngresar");
 
 // Escuchar el evento de click en el botón de ingreso
 loginButton.addEventListener("click", (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto de enviar el formulario
 
-    const email = emailInput.value;
-    const password = passwordInput.value;
+    const txtCorreo = emailInput.value;
+    const txtContraseña = passwordInput.value;
 
     // Autenticar al usuario
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, txtCorreo, txtContraseña)
         .then((userCredential) => {
             // Inicio de sesión exitoso
             console.log("¡Inicio de sesión exitoso!");

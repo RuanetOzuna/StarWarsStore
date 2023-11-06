@@ -12,63 +12,117 @@
     </head>
 
     <body>
-        <!-- Formulario para agregar libros -->
-        <form id="form-coleccionable">
+        <header id="encabezado">
+            <div id="logo-eslogan">
+                <div id="logo">
+                    <img src="/img/logo.jpeg" style="width: 250px; height: 250px;" alt="Logo de Star Wars Store">
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="/index.html">Página de Inicio</a>
+                    <a class="navbar-brand text-white" href="/html/login.html">Inicio de Sesión</a>
+                    <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Hot Toys</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sideshow Collectibles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Funko Pop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-disabled="true">Black Series</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>        
+        </header>
+        <div id="contenedor">
+            <!-- Formulario para agregar libros -->
+            <form id="form-coleccionable">
 
-            <!-- Select distribuidor -->
-            <label for="lbl-distribuidor">
-                Distribuidor:
-            </label>
-            <select id="slct-distribuidor" required>
-                <option value="" disabled selected>
-                    Selecciona el distribuidor
-                </option>
-                <option value="hottoys">
-                    Hot Toys
-                </option>
-                <option value="sideshow">
-                    Sideshow Collectibles
-                </option>
-                <option value="blackseries">
-                    Black Series
-                </option>
-                <option value="funko">
-                    Funko Pop
-                </option>
-            </select>
+                <!-- Select distribuidor -->
+                <label for="lbl-distribuidor">
+                    Distribuidor:
+                </label>
+                <select id="slct-distribuidor" required>
+                    <option value="" disabled selected>
+                        Selecciona el distribuidor
+                    </option>
+                    <option value="hottoys">
+                        Hot Toys
+                    </option>
+                    <option value="sideshow">
+                        Sideshow Collectibles
+                    </option>
+                    <option value="blackseries">
+                        Black Series
+                    </option>
+                    <option value="funko">
+                        Funko Pop
+                    </option>
+                </select>
 
-            <!-- Text nombre -->
-            <label for="lbl-nombre">
-                Nombre:
-            </label>
-            <input type="text" id="txt-nombre" placeholder="Nombre" required>
+                <br>
+                <br>
+    
+                <!-- Text nombre -->
+                <label for="lbl-nombre">
+                    Nombre:
+                </label>
+                <input type="text" id="txt-nombre" placeholder="Nombre" required>
+    
+                <br>
+                <br>
 
-            <!-- Text precio -->
-            <label for="lbl-precio">
-                Precio:
-            </label>
-            <input type="text" id="txt-precio" placeholder="Precio" required>
+                <!-- Text precio -->
+                <label for="lbl-precio">
+                    Precio:
+                </label>
+                <input type="text" id="txt-precio" placeholder="Precio" required>
+    
+                <br>
+                <br>
 
-            <!-- Text descripcion -->
-            <label for="lbl-descripcion">
-                Descripcion:
-            </label>
-            <input type="text" id="txt-descripcion" placeholder="Descripcion" required>
+                <!-- Text descripcion -->
+                <label for="lbl-descripcion">
+                    Descripcion:
+                </label>
+                <input type="text" id="txt-descripcion" placeholder="Descripcion" required>
+    
+                <br>
+                <br>
 
-            <!-- File imagen -->
-            <label for="lbl-imagen">
-                Imagen:
-            </label>
-            <input type="file" id="fl-imagen" accept="image/*" required>
-
-            <!-- Hidden id -->
-            <input type="hidden" id="hd-id">
-
-            <!-- Boton guardar -->
-            <button type="submit">
-                Guardar coleccionable
-            </button>
-        </form>
+                <!-- File imagen -->
+                <label for="lbl-imagen">
+                    Imagen:
+                </label>
+                <input type="file" id="fl-imagen" accept="image/*" style="color: white;" required>
+    
+                <br>
+                <br>
+                <!-- Hidden id -->
+                <input type="hidden" id="hd-id">
+    
+                <center>
+                    <!-- Boton guardar -->
+                    <button type="submit">
+                        Guardar coleccionable
+                    </button>
+                </center>
+            </form>
+        </div>
 
         <!-- Formulario para editar libros -->
         <form id="editar-form-coleccionable" style="display:none;">

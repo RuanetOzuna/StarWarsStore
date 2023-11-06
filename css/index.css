@@ -1,8 +1,16 @@
-/* Estilos generales */
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del cuerpo del documento */
 body {
-    background-color: #111;
-    color: #fff;
     font-family: -apple-system;
+    font-weight: bold;
+    background-color: white;
+    color: white;
+    font-size: 12px;
 }
 
 #pie {
@@ -12,6 +20,7 @@ body {
     background-color: black;
     color: #fff;
     font-size: 15px;
+    font-weight: bold;
 }
 
 #encabezado {
@@ -38,6 +47,7 @@ body {
 .navbar a {
     color: #fff !important;
     transition: color 0.3s; /* Transición para el color del texto */
+    font-weight: bold;
 }
 
 /* Agrega un efecto de transición al pasar el ratón sobre la barra de navegación */
