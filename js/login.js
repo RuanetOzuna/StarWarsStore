@@ -30,10 +30,12 @@ loginButton.addEventListener("click", (e) => {
         .catch((error) => {
             const errors = document.querySelector('.error');
             errors.classList.add('errors');
+            errors.textContent = "Usuario o contraseña incorrectos";
+
             setTimeout(() => {
                 errors.classList.remove('errors');
-            }, 2000);
-            document.querySelector(".error").textContent = "Los datos no son correctos";
+                errors.textContent = '';
+            }, 3000);
         });
 });
 

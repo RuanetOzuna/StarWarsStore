@@ -77,6 +77,8 @@ function guardarColeccionable(distribuidor, nombre, precio, descripcion, imageFi
     }
   }
 
+  document.getElementById('listaColeccionables').scrollIntoView({ behavior: 'smooth' }); 
+
   if (imageFile) {
     uploadImage(imageFile, (imageUrl) => {
       storeData(imageUrl);
@@ -130,6 +132,8 @@ function editarColeccionable(distribuidor, id, data) {
   document.getElementById('editartxtprecio').value = data.precio;
   document.getElementById('editartxtdescripcion').value = data.descripcion;
   document.getElementById('editarhdid').value = id;
+
+  document.getElementById('editarformcoleccionable').scrollIntoView({ behavior: 'smooth' });
 }
 
 function mostrarColeccionables() {
@@ -143,7 +147,7 @@ function mostrarColeccionables() {
   document.getElementById('listaColeccionables').appendChild(table);
 
   const trHeader = document.createElement("tr");
-  ["Distribuidor", "Nombre", "Precio", "Descripción", "Imagen", "Acciones"].forEach(headerText => {
+  ["Distribuidor", "Nombre", "Precio", "Descripción", "Imagen", "Botones"].forEach(headerText => {
     const th = document.createElement("th");
     th.textContent = headerText;
     trHeader.appendChild(th);
@@ -184,19 +188,27 @@ function mostrarColeccionables() {
       tdImagen.appendChild(img);
       tr.appendChild(tdImagen);
 
-      const tdAcciones = document.createElement("td");
+      const tdBotones = document.createElement("td");
+      tdBotones.style.display = 'flex';
+      tdBotones.style.flexDirection = 'column';
+
       const btnBorrar = document.createElement("button");
       btnBorrar.innerText = "Borrar";
       btnBorrar.onclick = () => borrarColeccionable(distribuidor, snapshot.key);
-      tdAcciones.appendChild(btnBorrar);
+      tdBotones.appendChild(btnBorrar);
 
+      const espacioEntreBotones = document.createElement("div");
+      espacioEntreBotones.style.height = '5px';
+      tdBotones.appendChild(espacioEntreBotones);
+      
       const btnEditar = document.createElement("button");
       btnEditar.innerText = "Editar";
       btnEditar.onclick = () => editarColeccionable(distribuidor, snapshot.key, data);
-      tdAcciones.appendChild(btnEditar);
-
-      tr.appendChild(tdAcciones);
+      tdBotones.appendChild(btnEditar);
+      
+      tr.appendChild(tdBotones);
       tbody.appendChild(tr);
+      
     });
 
     onChildChanged(coleccionableRef, snapshot => {

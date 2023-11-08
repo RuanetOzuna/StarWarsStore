@@ -73,7 +73,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     color: white;
-    border: 3px solid white;
 }
 
 table, th, td {
@@ -86,7 +85,6 @@ th, td {
     text-align: left;
     color: white;
     border: 3px solid white;
-    
 }
 
 tr:nth-child(even) {
@@ -129,3 +127,27 @@ button:hover {
     background-color: black;
     color: white;
 }
+
+
+@media (max-width: 768px) {
+    table {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    th, td {
+      display: block;
+      width: 100%;
+    }
+  
+    th {
+      background-color: black;
+      color: white;
+      border: 3px solid white;
+    }
+  
+    td {
+      border: 3px solid white;
+      margin-top: 5px;
+    }
+  }
