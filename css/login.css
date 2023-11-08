@@ -1,10 +1,8 @@
-/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Estilos generales del cuerpo del documento */
 body {
     font-family: -apple-system;
     font-weight: bold;
@@ -29,20 +27,18 @@ body {
 
 .navbar {
     background-color: #000;
-    transition: background-color 0.3s; /* Transición para el color de fondo */
+    transition: background-color 0.3s;
 }
 
 .navbar a {
     color: #fff !important;
-    transition: color 0.3s; /* Transición para el color del texto */
+    transition: color 0.3s;
 }
 
-/* Agrega un efecto de transición al pasar el ratón sobre la barra de navegación */
 .navbar:hover {
-    background-color: #333; /* Color de fondo al pasar el ratón */
+    background-color: #333;
 }
 
-/* Estilos para el contenedor principal */
 #contenedor {
     width: 80%;
     margin: 20px auto;
@@ -51,7 +47,6 @@ body {
     border-radius: 8px;
     border: 3px solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
 }
 
 label {
@@ -71,7 +66,6 @@ select {
     border-radius: 8px;
 }
 
-/* Estilos para el pie de página */
 #pie {
     clear: both;
     text-align: center;
@@ -83,21 +77,21 @@ select {
     border-radius: 8px;
 }
 
-/* Estilos para los botones */
 button {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 12px;
     font-weight: bold;
     padding: 10px 20px;
-    border: none;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 8px;
     cursor: pointer;
     margin-right: 10px;
     margin-bottom: 10px;
-    border-radius: 8px;
 }
 
 button:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }

@@ -33,12 +33,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Sideshow Collectibles</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Funko Pop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" aria-disabled="true">Black Series</a>
-                        </li>
                         </ul>
                     </div>
                     <form class="d-flex" role="search">
@@ -49,14 +43,16 @@
             </nav>        
         </header>
         <div id="contenedor">
-            <!-- Formulario para agregar libros -->
-            <form id="form-coleccionable">
-
-                <!-- Select distribuidor -->
-                <label for="lbl-distribuidor">
+            <form id="formcoleccionable">
+                <center>
+                    <label for="lblformcoleccionable" style="font-size: 20px;">
+                        Añadir un nuevo coleccionable
+                    </label>
+                </center>
+                <label for="lbldistribuidor">
                     Distribuidor:
                 </label>
-                <select id="slct-distribuidor" required>
+                <select id="slctdistribuidor" required>
                     <option value="" disabled selected>
                         Selecciona el distribuidor
                     </option>
@@ -66,143 +62,112 @@
                     <option value="sideshow">
                         Sideshow Collectibles
                     </option>
-                    <option value="blackseries">
-                        Black Series
-                    </option>
-                    <option value="funko">
-                        Funko Pop
-                    </option>
                 </select>
-
                 <br>
                 <br>
-    
-                <!-- Text nombre -->
-                <label for="lbl-nombre">
+                <label for="lblnombre">
                     Nombre:
                 </label>
-                <input type="text" id="txt-nombre" placeholder="Nombre" required>
-    
+                <input type="text" id="txtnombre" placeholder="Capture el nombre..." required>
                 <br>
                 <br>
-
-                <!-- Text precio -->
-                <label for="lbl-precio">
+                <label for="lblprecio">
                     Precio:
                 </label>
-                <input type="text" id="txt-precio" placeholder="Precio" required>
-    
+                <input type="text" id="txtprecio" placeholder="Capture el precio..." required>
                 <br>
                 <br>
-
-                <!-- Text descripcion -->
-                <label for="lbl-descripcion">
+                <label for="lbldescripcion">
                     Descripcion:
                 </label>
-                <input type="text" id="txt-descripcion" placeholder="Descripcion" required>
-    
+                <input type="text" id="txtdescripcion" placeholder="Capture la descripción..." required>
                 <br>
                 <br>
-
-                <!-- File imagen -->
-                <label for="lbl-imagen">
+                <label for="lblimagen">
                     Imagen:
                 </label>
-                <input type="file" id="fl-imagen" accept="image/*" style="color: white;" required>
-    
+                <input type="file" id="flimagen" accept="image/*" style="color: white;" required>
                 <br>
                 <br>
-                <!-- Hidden id -->
-                <input type="hidden" id="hd-id">
-    
+                <input type="hidden" id="hdid">
                 <center>
-                    <!-- Boton guardar -->
                     <button type="submit">
                         Guardar coleccionable
                     </button>
                 </center>
             </form>
+            <br>
+            <br>
+            <br>
+            <center>
+                <label for="lbltablaproductos" style="font-size: 20px;">
+                    Tabla de Productos
+                </label>
+            </center>
+            <br>
+            <div id="listaColeccionables">
+            </div>
+            <br>
+            <br>
+            <br>
+            <form id="editarformcoleccionable" style="display:none;">
+                <center>
+                    <label for="lblformeditar" style="font-size: 20px;">
+                        Editar un coleccionable
+                    </label>
+                </center>
+                <label for="editarlbldistribuidor">
+                    Distribuidor:
+                </label>
+                <select id="editarslctdistribuidor" required>
+                    <option value="" disabled selected>
+                        Selecciona el distribuidor
+                    </option>
+                    <option value="hottoys">
+                        Hot Toys
+                    </option>
+                    <option value="sideshow">
+                        Sideshow Collectibles
+                    </option>
+                </select>
+                <br>
+                <br>
+                <label for="editarlblnombre">
+                    Nombre:
+                </label>
+                <input type="text" id="editartxtnombre" placeholder="Capture el nuevo nombre..." required>
+                <br>
+                <br>
+                <label for="editarlblprecio">
+                    Precio:
+                </label>
+                <input type="text" id="editartxtprecio" placeholder="Capture el nuevo precio..." required>
+                <br>
+                <br>
+                <label for="editarlbldescripcion">
+                    Descripcion:
+                </label>
+                <input type="text" id="editartxtdescripcion" placeholder="Capture la nueva descripción..." required>
+                <br>
+                <br>
+                <label for="editarlblimagen">
+                    Imagen:
+                </label>
+                <input type="file" id="editarflimagen" accept="image/*" style="color: white;" required>
+                <br>
+                <br>
+                <input type="hidden" id="editarhdid">
+                <center>
+                    <button type="submit" value="Actualizar coleccionable">
+                        Actualizar Coleccionable
+                    </button>
+                    <button type="button" data-cancel-button>
+                        Cancelar Actualización de Coleccionable
+                    </button>
+                </center>
+            </form>
         </div>
-
-        <!-- Formulario para editar libros -->
-        <form id="editar-form-coleccionable" style="display:none;">
-            <h3>
-                Editar coleccionable
-            </h3>
-            
-            <!-- Editar distribuidor -->
-            <label for="editar-lbl-distribuidor">
-                Distribuidor:
-            </label>
-            <select id="editar-slct-distribuidor" required>
-                <option value="" disabled selected>
-                    Selecciona el distribuidor
-                </option>
-                <option value="hottoys">
-                    Hot Toys
-                </option>
-                <option value="sideshow">
-                    Sideshow Collectibles
-                </option>
-                <option value="blackseries">
-                    Black Series
-                </option>
-                <option value="funko">
-                    Funko Pop
-                </option>
-            </select>
-
-            <br>
-
-            <!-- Editar nombre -->
-            <label for="editar-lbl-nombre">
-                Nombre:
-            </label>
-            <input type="text" id="editar-txt-nombre" placeholder="Nombre" required>
-
-            <br>
-
-            <!-- Editar precio -->
-            <label for="editar-lbl-precio">
-                Precio:
-            </label>
-            <input type="text" id="editar-txt-precio" placeholder="Precio" required>
-
-            <br>
-
-            <!-- Editar descripcion -->
-            <label for="editar-lbl-descripcion">
-                Descripcion:
-            </label>
-            <textarea type="text" id="editar-txt-descripcion" placeholder="Descripcion" required>
-
-            </textarea>
-
-            <br>
-
-            <!-- Editar imagen -->
-            <label for="editar-lbl-imagen">
-                Imagen:
-            </label>
-            <input type="file" id="editar-fl-imagen" accept="image/*" required>
-
-            <br>
-
-            <!-- Editar id -->
-            <input type="hidden" id="editar-hd-id">
-
-            <input type="submit" value="Actualizar coleccionable">
-            <button type="button" data-cancel-button>
-                Cancelar actualizacion
-            </button>
-        </form>
-
-        <ul id="bookList">
-
-        </ul>
-
-        <script type="module" src="/js/basededatos.js">
-
+        <script type="module" src="/js/database.js">
         </script>
     </body>
 </html>
