@@ -1,6 +1,6 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7F7F7&random=false&width=435&lines=Welcome+to+my+presentation;Ruanet+Alejandro+Ozuna+Diaz;Information+Technology+Engineering;HTML,+CSS,+Javascript" alt="Typing SVG" /></a>
 
-👨🏻‍💻 El proyecto es una aplicación web desarrollada para gestionar una tienda en línea especializada en coleccionables de "Star Wars". La aplicación permite a los usuarios autenticarse, navegar por los productos disponibles y añadir nuevos coleccionables a la base de datos. [in progress].
+👨🏻‍💻 The project is a web application developed to manage an online store specialized in “Star Wars” collectibles. The application allows users to authenticate, browse the available products and add new collectibles to the database. [in progress].
 
 ## Skills used in this project
 
