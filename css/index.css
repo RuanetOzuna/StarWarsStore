@@ -7,8 +7,15 @@ body {
     font-family: -apple-system;
     font-weight: bold;
     background-color: white;
-    color: white;
+    color: black;
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1;
 }
 
 #pie {
@@ -19,6 +26,7 @@ body {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+    margin-top: 30px;
 }
 
 #encabezado {
@@ -139,3 +147,7 @@ h1 {
     }
 }
 
+#funkopop {
+    text-align: center;
+    margin-bottom: 30px;
+}

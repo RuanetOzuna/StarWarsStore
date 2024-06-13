@@ -88,3 +88,40 @@ function mostrarSideShow() {
 }
 
 mostrarSideShow();
+
+function mostrarFunko() {
+    const distribuidor = "funko";
+    const funkoContenedor = document.getElementById('funko-contenedor');
+
+    const coleccionableRef = ref(db, 'coleccionables/' + distribuidor);
+
+    onChildAdded(coleccionableRef, snapshot => {
+        const data = snapshot.val();
+        const coleccionableDiv = document.createElement("div");
+        coleccionableDiv.className = "coleccionable";
+        coleccionableDiv.id = `${distribuidor}-${snapshot.key}`;
+
+        const image = document.createElement("img");
+        image.src = data.imageUrl;
+        image.alt = data.nombre;
+        image.width = 100;
+        image.classList.add('img');
+        coleccionableDiv.appendChild(image);
+
+        const nombreColeccionable = document.createElement("p");
+        nombreColeccionable.textContent = data.nombre;
+        coleccionableDiv.appendChild(nombreColeccionable);
+
+        const tituloPrecioColeccionable = document.createElement("h3");
+        tituloPrecioColeccionable.textContent = `Precio`;
+        coleccionableDiv.appendChild(tituloPrecioColeccionable);
+
+        const precioColeccionable = document.createElement("h4");
+        precioColeccionable.textContent = `${data.precio}`;
+        coleccionableDiv.appendChild(precioColeccionable);
+
+        funkoContenedor.appendChild(coleccionableDiv);
+    });
+}
+
+mostrarFunko();

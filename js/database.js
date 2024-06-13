@@ -137,7 +137,7 @@ function editarColeccionable(distribuidor, id, data) {
 }
 
 function mostrarColeccionables() {
-  const distribuidores = ["hottoys", "sideshow"];
+  const distribuidores = ["hottoys", "sideshow", "funko"];
 
   const table = document.createElement("table");
   const thead = document.createElement("thead");
